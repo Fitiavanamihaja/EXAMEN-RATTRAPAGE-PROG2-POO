@@ -1,0 +1,16 @@
+    public static void main(String[] args) {
+        // Créer les utilisateurs
+        Utilisateur utilisateurReel = new UtilisateurReel("Mickael", "Mihaja", "hei.Mickael@gmail.com");
+        Utilisateur utilisateurAnonyme = new UtilisateurAnonyme("A1");
+
+        // Créer une publication
+        Publication publication = new Publication("P1", "Ceci est un message confidentiel.", "2025-10-06", utilisateurReel);
+
+        // Ajoute de plusieurs utilisateurs associés
+        publication.ajouterUtilisateurAssocie(utilisateurReel);
+        publication.ajouterUtilisateurAssocie(utilisateurAnonyme);
+
+        // Afficher l' informations de la publication
+        publication.afficherInformations();
+    }
+}
